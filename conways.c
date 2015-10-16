@@ -9,7 +9,7 @@
 #include <time.h>
 
 
-#define WORLDLENGTH 30 // The universe size
+#define WORLDLENGTH 60 // The universe size
 #define LIVE 35
 #define DEAD 32
 
@@ -88,7 +88,7 @@ char check_cell(universe *u, int x, int y)
         return DEAD;
     else if(u->cell[x][y] == LIVE)
         return LIVE;
-    else if(u->cell[x][y] == DEAD)
+    else if(u->cell[x][y] == DEAD && live_count == 3)
         return LIVE;
     else
         return DEAD;
